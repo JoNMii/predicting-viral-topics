@@ -1,0 +1,43 @@
+{
+	"name": "IDP",
+	"version": "0.0.1",
+	"description": "Set of scripts for scraping, parsing and analysing textual data",
+	"main": "crawler.js",
+	"dependencies": {
+		"async": "^1.4.0",
+		"automated-readability": "^1.0.0",
+		"big-integer": "^1.6.15",
+		"cheerio": "^0.19.0",
+		"coleman-liau": "^1.0.0",
+		"dale-chall-formula": "^1.0.0",
+		"document-tfidf": "^0.2.1",
+		"fb": "^1.1.1",
+		"file": "^0.2.2",
+		"flesch": "^1.0.0",
+		"flesch-kincaid": "^1.0.0",
+		"gunning-fog": "^1.0.0",
+		"mongodb": "^2.2.6",
+		"mongoose": "^4.1.0",
+		"node-jsdom": "^3.1.5",
+		"readability-checker": "^0.2.1",
+		"regression": "^1.2.1",
+		"request": "^2.74.0",
+		"sclass": "^1.5.0",
+		"smog-formula": "^1.0.0",
+		"spache-formula": "^1.0.0",
+		"syllable": "^1.0.0",
+		"twitter": "^1.4.0",
+		"url-join": "^1.1.0",
+		"walk": "^2.3.9",
+		"word-count": "^0.2.2",
+		"word-ngrams": "^0.2.0"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"crawler": "node crawler.js",
+		"get-social-stats": "node get-social-stats.js",
+		"parser": "node parser.js",
+		"complexity": "node complexity.js"
+	},
+	"author": "Eric Gopak"
+}

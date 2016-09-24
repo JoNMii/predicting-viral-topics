@@ -1,0 +1,83 @@
+{
+	"version": "0.2.1",
+	"default": {
+		"period": 86400000,
+		"args": [],
+		"subdir": ""
+	},
+	"required": {
+		"args": [
+			"--wait=3",
+			"--tries=1"
+		]
+	},
+	"path_to_wget": "./bin/wget",
+	"download_dir": "downloads",
+	"hosts": {
+		"http://www.investopedia.com": {
+			"rules": {
+				"/investing/": {
+					"period": -1,
+					"args": [
+						"-r",
+						"--accept-regex",
+						"^.*/articles/investing/.+$"
+					]
+				},
+				"/financial-advisor/": {
+					"period": -1,
+					"args": [
+						"-r",
+						"--accept-regex",
+						"^.*/articles/financial-advisor/.+$"
+					]
+				},
+				"/personal-finance/": {
+					"period": -1,
+					"args": [
+						"-r",
+						"--accept-regex",
+						"^.*/articles/personal-finance/.+$"
+					]
+				}
+			}
+		},
+		"https://www.entrepreneur.com": {
+			"rules": {
+				"/topic/finance": {
+					"period": -1,
+					"args": [
+						"-r",
+						"--accept-regex",
+						"^.*/article/[^/]+$"
+					]
+				}
+			}
+		},
+		"https://www.finextra.com": {
+			"rules": {
+				"/news/latestnews.aspx": {
+					"period": -1,
+					"args": [
+						"-r",
+						"--accept-regex",
+						"^.*/newsarticle/[^/]+/[^/]+$"
+					]
+				}
+			}
+		}
+	},
+	"inactive_hosts": {
+		"http://www.businessinsider.com": {
+			"rules": {
+				"/clusterstock?IR=T": {
+					"args": [
+						"-r",
+						"--accept-regex",
+						"^http://www.businessinsider.com/[^/?]+$"
+					]
+				}
+			}
+		}
+	}
+}
