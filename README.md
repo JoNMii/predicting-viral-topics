@@ -51,6 +51,8 @@ Here is a more detailed description of the file structure:
 │       ├── export_mongodb_to_csv.bat # write out all articles to CSV file
 │       ├── printout_mongodb_data.js  # similarly, but with Node.js
 │       ├── test_single.js            # Open Graph API request test
+│       ├── scopus
+│       │   └── get_articles_data.js   # collect article abstracts via Scopus API
 │       └── twitter
 │           ├── get_tweets_rest.js   # collect tweets via REST API
 │           └── get_tweets_stream.js # collect tweets via Streaming API
